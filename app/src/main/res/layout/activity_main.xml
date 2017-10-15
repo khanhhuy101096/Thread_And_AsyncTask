@@ -1,19 +1,52 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout
+<RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.khanhhuy.thread_and_asynctask1.MainActivity">
+    >
 
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
+        android:id="@+id/text_test"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:text="@string/test_test"
+        android:layout_alignParentTop="true"/>
 
-</android.support.constraint.ConstraintLayout>
+    <ImageView
+        android:id="@+id/image_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/text_test"
+        android:layout_above="@+id/button_start_thread"/>
+
+    <Button
+        android:id="@+id/button_start_thread"
+        android:layout_width="@dimen/width"
+        android:layout_height="@dimen/height"
+        android:text="Start Thread"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:onClick="startThread"
+        />
+
+    <Button
+        android:id="@+id/button_start"
+        android:layout_width="@dimen/width"
+        android:layout_height="@dimen/height"
+        android:text="Start"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:onClick="runThread"
+        />
+
+    <Button
+        android:id="@+id/button_start_asyncask"
+        android:layout_width="@dimen/width"
+        android:layout_height="@dimen/height"
+        android:text="Start AsyncTask"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:onClick="startAsyncTask"
+        />
+
+</RelativeLayout>
